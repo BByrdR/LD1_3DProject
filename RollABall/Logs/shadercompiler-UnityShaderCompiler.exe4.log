@@ -43,3 +43,4 @@ Cmd: compileSnippet
 Cmd: disassembleShader
  name=Custom/invisblewall platform=d3d11 type=15 mask=6 insize=1250 outsize=2446 ok=1
 
+Cmd: shutdown
