@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+
     public enum GameStates
     {
         GamePlaying,
@@ -15,6 +16,8 @@ public class GameController : MonoBehaviour
     private GameView gameView;
     private GameStates gameState;
     private int maxCollectiblesCount;
+    public SimpleTimer SimpleTimer;
+    public float TimeCounterPickup;
 
     private void Start()
     {
@@ -22,7 +25,11 @@ public class GameController : MonoBehaviour
         gameState = GameStates.GamePlaying;
         maxCollectiblesCount = GameObject.FindGameObjectsWithTag("Pick Up").Length;
     }
-    
+    public void Pickup()
+    {
+        TimeCounterPickup = SimpleTimer.timeLimit + 5;
+
+    }
     private void OnGameWon()
     {
         gameState = GameStates.GameWon;
@@ -68,6 +75,7 @@ public class GameController : MonoBehaviour
 
     public void OnPickUpCollectible(int playerCollectibleCount)
     {
+        Pickup();
         gameView.SetCountText(playerCollectibleCount);
         // Check if our 'count' is equal to or exceeded our maxCollectibles count
         if (playerCollectibleCount >= maxCollectiblesCount) 

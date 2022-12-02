@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SimpleTimer : MonoBehaviour
 {
     public float timeLimit = 20;
-    private float timeGamePlayingStarted;
+    public float timeGamePlayingStarted;
     private GameController gameController;
 
     private void Awake()
