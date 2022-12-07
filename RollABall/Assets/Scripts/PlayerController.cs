@@ -13,8 +13,8 @@ public class PlayerController : MonoBehaviour {
 	// Create private references to the rigidbody component on the player, and the count of pick up objects picked up so far
 	private Rigidbody rb;
 	private int count;
-	private GameController gameController;
-	private SimpleTimer SimpleTimer;
+    private GameController gameController;
+    private SimpleTimer SimpleTimer;
 
 	// At the start of the game..
 	void Start ()

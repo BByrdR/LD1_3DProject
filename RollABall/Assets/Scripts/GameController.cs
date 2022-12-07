@@ -17,18 +17,12 @@ public class GameController : MonoBehaviour
     private GameStates gameState;
     private int maxCollectiblesCount;
     public SimpleTimer SimpleTimer;
-    public float TimeCounterPickup;
 
     private void Start()
     {
         gameView = GetComponentInChildren<GameView>();
         gameState = GameStates.GamePlaying;
         maxCollectiblesCount = GameObject.FindGameObjectsWithTag("Pick Up").Length;
-    }
-    public void Pickup()
-    {
-        TimeCounterPickup = SimpleTimer.timeLimit + 5;
-
     }
     private void OnGameWon()
     {
@@ -75,7 +69,6 @@ public class GameController : MonoBehaviour
 
     public void OnPickUpCollectible(int playerCollectibleCount)
     {
-        Pickup();
         gameView.SetCountText(playerCollectibleCount);
         // Check if our 'count' is equal to or exceeded our maxCollectibles count
         if (playerCollectibleCount >= maxCollectiblesCount) 
