@@ -13,14 +13,14 @@ public class GameController : MonoBehaviour
         GameWon,
         GameLost
     };
-    private GameView gameView;
+    public GameView gameView;
     private GameStates gameState;
     private int maxCollectiblesCount;
-    public SimpleTimer SimpleTimer;
+
 
     private void Start()
     {
-        gameView = GetComponentInChildren<GameView>();
+      //  gameView = GetComponentInChildren<GameView>();
         gameState = GameStates.GamePlaying;
         maxCollectiblesCount = GameObject.FindGameObjectsWithTag("Pick Up").Length;
     }

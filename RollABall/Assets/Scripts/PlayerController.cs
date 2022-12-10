@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour {
 	private Rigidbody rb;
 	private int count;
     private GameController gameController;
-    private SimpleTimer SimpleTimer;
+
 
 	// At the start of the game..
 	void Start ()
