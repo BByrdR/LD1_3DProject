@@ -5,3 +5,5 @@
 Controls are "space bar" is jump
 The pinkish cubes on the ground are launch pads that launch you in the sky.
 The green cubes are speed boosts used to gain more momentum.
+W A S D are the controls for moving the ball. 
+
